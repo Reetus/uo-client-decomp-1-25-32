@@ -1,0 +1,12 @@
+# Your own copy of the original client (not distributed)
+orig/
+
+# Build output
+build-vc5/
+
+# A local copy of the client data files, if you keep one here
+rundir/
+
+# Python
+__pycache__/
+*.pyc

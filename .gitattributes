@@ -1,0 +1,7 @@
+* text=auto
+
+# Generated sources: collapsed in diffs
+src/game/globals.h linguist-generated
+src/game/globals.cpp linguist-generated
+src/game/vtables.h linguist-generated
+src/game/vtables.cpp linguist-generated
