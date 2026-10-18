@@ -2,6 +2,7 @@
 // 0x0042bd90 .. 0x0042bed0). (Porting pass 2, batch 10.)
 #include "world_renderer.h"
 
+#include <cstdlib>
 #include <cstring>
 
 #include "../runtime/ported.h"

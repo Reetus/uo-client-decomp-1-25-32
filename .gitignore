@@ -3,6 +3,7 @@ orig/
 
 # Build output
 build-vc5/
+build-msvc/
 
 # A local copy of the client data files, if you keep one here
 rundir/

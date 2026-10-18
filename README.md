@@ -47,7 +47,8 @@ python -I scripts/build_vc5.py
 That compiles the 264 source files in parallel (a few seconds) and links
 `build-vc5/client.exe`. To run it, copy `client.exe` into a 1.25.x client
 directory (the `*.MUL` data files and the rest of an install).
-[docs/building.md](docs/building.md) has the details.
+[docs/building.md](docs/building.md) has the details, including
+`scripts/build_msvc.py`, which builds with a current Visual Studio instead.
 
 ## Repository layout
 
@@ -57,7 +58,7 @@ directory (the `*.MUL` data files and the rest of an install).
 | `src/standalone/` | The entry point |
 | `src/runtime/` | Macros the ports share |
 | `src/compat/vc5/` | Headers Visual C++ 5.0 lacks |
-| `scripts/` | The build (`build_vc5.py`) and its two helpers |
+| `scripts/` | The builds (`build_vc5.py`, `build_msvc.py`) and their two helpers |
 | `docs/` | `building.md` |
 
 ## Legal

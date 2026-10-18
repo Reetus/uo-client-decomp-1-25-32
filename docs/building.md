@@ -56,6 +56,29 @@ The tested toolchain is Visual C++ 5.0 as first released (`cl` 11.00.7022,
 `link` 5.00.7022). The original was linked by linker 5.02 (Visual Studio 97
 Service Pack 1 or 2, per Microsoft KB Q170367).
 
+## Building with a current Visual Studio
+
+`scripts/build_msvc.py` builds the same sources with a current 32-bit x86
+MSVC (tested with Visual Studio 2026, `cl` 19.51) into `build-msvc/`:
+
+```powershell
+python -I scripts/build_msvc.py
+```
+
+It finds Visual Studio with `vswhere` (or takes `--vs ROOT` or the
+environment variable `MSVC_VS_ROOT`) and needs the "Desktop development with
+C++" workload. It takes `orig/CLIENT.EXE` like the VC5 build does.
+
+- Compiler: the VC5 flags with `-EHsc` for `-GX`, plus `-std:c++17` and
+  `-D_CRT_SECURE_NO_WARNINGS`. It does not use `src/compat/vc5`.
+- Linker: the VC5 flags plus `-largeaddressaware:no`. ASLR and DEP stay on
+  (the linker's defaults). The `.orig$` alignment step is the same, and the
+  global data keeps the original's layout.
+
+The result needs a current Windows (not Windows 9x), and its code is further
+from the original's than the VC5 build's. The VC5 build remains the
+reference.
+
 ## Run
 
 `client.exe` has to sit in a directory with the client data files (`*.MUL`,

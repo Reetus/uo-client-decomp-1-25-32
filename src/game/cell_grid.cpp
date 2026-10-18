@@ -3,6 +3,7 @@
 // (slots named in the comments are byte offsets).
 #include "cell_grid.h"
 
+#include <cstdlib>
 #include <cstring>
 
 #include "../runtime/ported.h"
